@@ -51,7 +51,7 @@ function EventDayViewClosed({onSubmit}) {
 
     return (
         <div style={{ border: "1px solid grey", padding: "1rem" }}>
-        <h2>1. "Full event" where everything is calculated in FE</h2>
+        <h2>2. "Day view closed" event that includes all results calculated in FE</h2>
         <table>
           <thead>
             <tr>

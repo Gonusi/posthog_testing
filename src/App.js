@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { generate } from "boring-name-generator";
 import DayViewClosed from "./components/EventDayViewClosed";
+import DayViewOpened from "./components/EventDayViewOpened";
 import posthog from "posthog-js";
 import DayViewChange from "./components/EventDayViewChange";
 import { SnackbarProvider, useSnackbar } from "notistack";
@@ -60,9 +61,9 @@ function App() {
         <br />
         <br />
         <br />
-
-        <DayViewClosed onSubmit={handleSubmit} />
+        <DayViewOpened onSubmit={handleSubmit} />
         <DayViewChange onSubmit={handleSubmit} />
+        <DayViewClosed onSubmit={handleSubmit} />
       </div>
     </>
   );
