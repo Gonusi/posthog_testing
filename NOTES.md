@@ -9,7 +9,6 @@ Ultimate goal:
   - increased error count or left it the same
 
 - See videos for events and actions and groups
-- Determine how to use boolean and string values in events and flows
 - Determine if we can have funnel: dayviewOpen -> dayviewChange -> dayviewChange -> (any number of changes) -> dayviewClose ->
 
 # Questions

@@ -13,8 +13,8 @@ function App() {
   useEffect(() => {
     if (initialised) return;
     setInitialised(true);
-    posthog.init("phc_ACu0UmEIujJJGkT8hHgRn7hkw3tnbdhAmVO8soGzROw", {
-      api_host: "https://eu.posthog.com",
+    posthog.init("phc_PHqmIEH61jJPStZ2BSY1y9LafpKnoNDlE8IEyPZ3eG2", {
+      api_host: "https://app.posthog.com",
     });
     posthog.identify(email, { name: email, email });
     console.log(
