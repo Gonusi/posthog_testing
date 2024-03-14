@@ -22,6 +22,7 @@ function DayViewChange({onSubmit}) {
 
     const handleSubmit = () => {
         onSubmit({name, data: {...state}})
+        onSubmit({name: BASE_NAME, data: {...state}})
     }
 
     const handleChange = (e) => {
