@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import constants from '../constants'
+import posthog from "posthog-js";
 
 const BASE_NAME = 'day view closed '
 
@@ -28,6 +29,7 @@ function EventDayViewClosed({onSubmit}) {
     const handleSubmit = () => {
         onSubmit({name, data: {...state}})
         onSubmit({name: BASE_NAME, data: {...state}})
+        posthog.stopSessionRecording()
     }
 
     const handleChange = (e) => {

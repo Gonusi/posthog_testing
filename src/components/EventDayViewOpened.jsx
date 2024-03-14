@@ -1,4 +1,5 @@
 import { useState } from "react";
+import posthog from "posthog-js";
 
 const DEFAULT_NAME = "day view open";
 
@@ -10,6 +11,7 @@ function DayViewOpened({ onSubmit }) {
 
   const handleSubmit = () => {
     onSubmit({ name: name ?? DEFAULT_NAME, data: { ...state } });
+    posthog.startSessionRecording()
   };
 
   const handleChange = (e) => {
