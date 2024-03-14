@@ -8,14 +8,14 @@ function EventDayViewClosed({onSubmit}) {
     const [name, setName] = useState(BASE_NAME)
     const [state, setState] = useState({
         actionCount: 4,
-        timeSpentSeconds: 5,
         efficiencyScore__actionCountIncreaseErrorCount: 1, 
+        efficiencyScore__actionCountReduceErrorCount: 3,
+        efficiencyScore__errorCountChange: -2, 
+        efficiencyScore__errorCountOnClose: 1,
         efficiencyScore__errorCountOnOpen: 3, 
         efficiencyScore__errorCountReduced: true, 
         efficiencyScore__errorCountReduceResult: 'success',
-        efficiencyScore__errorCountChange: -2, 
-        efficiencyScore__actionCountReduceErrorCount: 3,
-        efficiencyScore__errorCountOnClose: 1,
+        timeSpentSeconds: 5,
     })
 
     useEffect(() => {
@@ -63,7 +63,7 @@ function EventDayViewClosed({onSubmit}) {
 
     return (
         <div style={{ border: "1px solid grey", padding: "1rem" }}>
-        <h2>2. "Day view closed" event that includes all results calculated in FE</h2>
+        <h2>3. "Day view closed" event that includes all results calculated in FE</h2>
         <table>
           <thead>
             <tr>

@@ -31,7 +31,7 @@ function DayViewOpened({ onSubmit }) {
   return (
     <div style={{ border: "1px solid grey", padding: "1rem" }}>
       <h2>
-        0. "Day view open" event, recommend to perform this before everything
+        1. "Day view open" event, recommend to perform this before everything
         else
       </h2>
 
@@ -81,3 +81,10 @@ function DayViewOpened({ onSubmit }) {
 }
 
 export default DayViewOpened;
+
+
+
+
+/*
+knowing-rival
+*/
