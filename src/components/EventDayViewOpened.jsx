@@ -38,11 +38,12 @@ function DayViewOpened({ onSubmit }) {
           <tr>
             <th colSpan={4}>
               <label>
-                Event name (resets to default on reload):{" "}
+                Event name:{" "}
                 <input
                   onChange={(e) => setName(e.target.name)}
                   type="text"
                   value={name}
+                  style={{textAlign: 'left'}}
                 />
               </label>
             </th>

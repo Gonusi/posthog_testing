@@ -31,6 +31,12 @@ We could try to make an action a "success" if it reduces error - if it moves eff
 
 An action can remove (or reduce, see above) error in morning efficiency score, but increase it in afternoon.
 
+For now solution is that if action:
+
+- Reduces error count: success
+- Reduces error count and increases error count equally: failure
+- Increases error count: failure
+
 ## Recommendation
 
 Only use such actions inside funnels

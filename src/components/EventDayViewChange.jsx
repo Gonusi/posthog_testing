@@ -1,9 +1,10 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
+import constants from '../constants'
 
-const DEFAULT_NAME = 'day view change'
+const BASE_NAME = 'day view change '
 
 function DayViewChange({onSubmit}) {
-    const [name, setName] = useState(DEFAULT_NAME)
+    const [name, setName] = useState(BASE_NAME + constants.success)
     const [state, setState] = useState({
         efficiencyScore__errorCountBeforeEvent: 3,
         efficiencyScore__errorCountAfterEvent: 2,
@@ -11,8 +12,16 @@ function DayViewChange({onSubmit}) {
         efficiencyScore__errorCountReduceResult: 'success',
     })
 
+    useEffect(() => {
+      if (state.efficiencyScore__errorCountReduceResult === 'success') {
+        setName(BASE_NAME + constants.success)
+      } else {
+        setName(BASE_NAME + constants.failure)
+      }
+    }, [state.efficiencyScore__errorCountReduceResult])
+
     const handleSubmit = () => {
-        onSubmit({name: name ?? DEFAULT_NAME, data: {...state}})
+        onSubmit({name, data: {...state}})
     }
 
     const handleChange = (e) => {
@@ -48,7 +57,7 @@ function DayViewChange({onSubmit}) {
         <table>
           <thead>
             <tr>
-              <th colSpan={2}><label>Event name (resets to default on reload): <input onChange={e => setName(e.target.name)} type="text" value={name} /></label></th>
+              <th colSpan={2}><label>Event name: <input style={{width: 350, textAlign: 'left'}} onChange={e => setName(e.target.name)} type="text" value={name} /></label></th>
             </tr>
             <tr>
               <th>Error count before event</th>

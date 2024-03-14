@@ -43,6 +43,7 @@ function App() {
           border: 1px solid black;
           padding: 0.5rem;
           font-size: 0.8rem;
+          text-align: right;
         }
         input {
           text-align: right;
