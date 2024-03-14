@@ -2,9 +2,6 @@
 
 - Created app, here's a link: https://flower-tulip-948431.netlify.app/
 - Created posthog instance: https://us.posthog.com
-  username: `sutemu.dirbtuves@gmail.com`
-  password: `flower-tulip`
-
 - Let's review the app. It includes 3 types of events, and simulates how it would be implemented in our own app:
 
   - user email, important to identify stuff later
